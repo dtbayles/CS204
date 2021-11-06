@@ -1,0 +1,12 @@
+Nov 04, 2021 9:40:19 PM aspect.LoggerAspect logDAO
+INFO: The target class is class dao.StudentDAOHibernate and the method entered is getStudentById(int))
+Nov 04, 2021 9:40:19 PM aspect.LoggerAspect logDAO
+INFO: value(s) returned was: Student{studentID=12345, name='C. Brown', address='12 Apple St.', phone='555-1234'}
+Nov 04, 2021 9:40:19 PM aspect.LoggerAspect logDAO
+INFO: DAO execution time: 79 milliseconds
+Nov 04, 2021 9:40:19 PM aspect.LoggerAspect logDAO
+INFO: The target class is class dao.StudentDAOHibernate and the method entered is getAllStudents())
+Nov 04, 2021 9:40:19 PM aspect.LoggerAspect logDAO
+INFO: value(s) returned was: [Student{studentID=12345, name='C. Brown', address='12 Apple St.', phone='555-1234'}, Student{studentID=22222, name='P. Patty', address='56 Grape Blvd', phone='555-9999'}, Student{studentID=33333, name='Snoopy', address='12 Apple St.', phone='555-1234'}, Student{studentID=67890, name='L. Van Pelt', address='34 Pear Ave.', phone='555-5678'}]
+Nov 04, 2021 9:40:19 PM aspect.LoggerAspect logDAO
+INFO: DAO execution time: 179 milliseconds

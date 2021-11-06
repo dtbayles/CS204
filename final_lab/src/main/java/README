@@ -1,0 +1,72 @@
+This program simulates a student during a semester. The program begins by asking the user what their name is
+and then asking how many tests there will be during the semester. IT IS THAT NUMBER THAT THE STUDENT WILL HAVE
+TO PASS IN ORDER TO GRADUATE AND COMPLETE THE PROGRAM. After a name and the number of tests that must be passed
+have been established correctly, the program displays its own UseMe that the user can follow to execute commands
+in the program. A review of these commands are shown below:
+
+DS - Do Schoolwork: Increases the student's intelligence level by a random number between 1 and 10, but also puts the
+student in a state of stress.
+
+IS - Inspire Self: Increases the student's motivation level by a random number between 1 and 10. This function will only
+work if the student's current motivation level is 0.
+
+DH - Do Hobby: Will break a student out of his/her state of stress, but will decrease the student's motivation level by
+a random number between 1 and 10. However, the motivation level will not go below 1.
+
+TT - Take Test: Will allow the student to take one of the tests necessary to graduate and complete the program.
+If the student is in a state of stress and motivation there will be a chance role that the student passes the test
+(see States: YesMotivatedYesStressed). If the student is in a state of no stress but is motivated, he/she will pass
+the test regardless of stats. Take Test will throw a student into a state of stress. Also since almost all tests challenge
+new material, a student's intelligence level will be set back to 0 as he/she will need to study that specific material.
+Lastly, if a student passes a test his/her motivation level will go down, without dipping below 1. While if the student
+could not pass the test, then his/her motivation level will be set to 0.
+
+status - shows your current stats as a student. (See Student Summary, first paragraph)
+
+exit - give up and quite the program, this will simply terminate the program without the user graduating.
+
+help - see these options again. Will display the list of commands shown above.
+
+Student Summary:
+A student has a list of stats that are shown when the status command is given. The stats are as follows:
+
+Student: displays the name given by the user.
+
+Motivation level: the student's current motivation level, which will be a number between 0 and 10. A
+student must be motivated before taking a test. That means a student must have a motivation level of
+at least 1 before taking a test. Motivation level is one of the two stats used in the chance role that
+the student passes a test when in a YesMotivatedYesStressed state (see States: YesMotivatedYesStressed).
+
+Intelligence level: the student's current intelligence level, which will be a number between 0 and 10.
+Motivation level is the other of the two stats used in the chance role that the student passes a test
+when in a YesMotivatedYesStressed state (see States: YesMotivatedYesStressed).
+
+Tests completed this semester: displays the total number of tests passed this semester. When this number
+reaches the number suggested by the user at the beginning of the program, the user will graduate. This
+number increases by one with every passed test. Tests that the user couldn't pass will not effect this number.
+
+Stressed: true or false, will show if the student is in a state of stress or not.
+
+States:
+In addition to his or her stats, a student will also be in a combined state of motivation and stress at all
+times over the course of the semester. The states of the student are as follows:
+
+NotMotivatedNotStressed: This is the default state in which the user will start the semester. In this state
+a student can either have the option to DO SCHOOLWORK or Inspire Self. The student will not be able to Take
+Test, because their motivation level will be 0, and Do Hobby will not result in anything since stress and
+motivation are not currently factors.
+
+NotMotivatedYesStressed: In this state a student is fit to Do Schoolwork, DO HOBBY, or Inspire Self. In this
+state, however, a student still cannot take a test, because their motivation level will be 0.
+
+YesMotivatedNotStressed: In this state a student is fit to Do Schoolwork or TAKE TEST. It is in this state
+that a student is guaranteed to pass whatever test he/she takes, as studying is less important than test
+anxiety in this program. Do Hobby will do nothing in this instance as the student should not be stressed
+in this circumstance. Motivation level is also untouched if Do Hobby is called in this state. Inspire Self
+will also do nothing in this state as that function will do nothing if a student's motivation level is above 0.
+
+YesMotivatedYesStressed: In this state a student is fit to Do Schoolwork, Do Hobby, or TAKE TEST. Take Test
+is a chance role where the student's current intelligence and motivation level will be added together and
+compared against a random number between 1 and 20. If the student's combined value is larger than the one
+randomly generated, the student will pass the test. Inspire Self will do nothing in this state as
+that function will do nothing if a student's motivation level is above 0.
